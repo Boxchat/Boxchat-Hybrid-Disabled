@@ -3,7 +3,7 @@
         <oa-header :where="where" :headertype="headertype" :title="chatuser"></oa-header>
         <mt-tabbar class="tabbar">
             <div class="tabbar-content">
-                <mt-field placeholder="请输入发送的消息..." type="text" class="text-input"></mt-field>
+                <mt-field placeholder="请输入发送的消息..." type="text" class="text-input" @blur.native.capture="test"></mt-field>
                 <mt-button class="send-button" plain>发送</mt-button>
             </div>
         </mt-tabbar>
@@ -72,6 +72,14 @@ export default {
     computed: {
         VuexModelStat () {
             return this.$store.getters.chatModelVisible
+        }
+    },
+    methods: {
+        // send (e) {
+        //     e.preventDefault();
+        // },
+        test () {
+            console.log(1)
         }
     },
 }
