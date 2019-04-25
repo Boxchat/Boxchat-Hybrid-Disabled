@@ -1,11 +1,11 @@
 <template>
-    <mt-popup v-model="modelstat" position="right" class="pop--white">
+    <mt-popup v-model="modelStat" position="right" class="pop--white">
         <oa-header :title="title" :headertype="headertype" @modelClose="modelClose"></oa-header>
         
     </mt-popup>
 </template>
 
-<style lang="scss" scoped>
+<style lang="scss">
     .pop--white {
         height: 100vh;
         width: 100vw;
@@ -24,23 +24,23 @@ export default {
         return {
             title: '设置',
             back: 'back',
-            modelstat: false,
+            modelStat: false,
         }
     },
     methods: {
         modelClose () {
-            this.$store.commit('changeSettingModelVisible')
+            this.$store.commit('settingModelVisible')
 
         }
     },
     watch: {
-        Vuetest (val) {
-            this.modelstat = val
+        VuexModelStat (val) {
+            this.modelStat = val
         }
     },
     computed: {
-        Vuetest () {
-            return this.$store.getters.SettingModelVisible
+        VuexModelStat () {
+            return this.$store.getters.settingModelVisible
         }
     },
 }

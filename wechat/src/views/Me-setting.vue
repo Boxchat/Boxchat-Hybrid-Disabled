@@ -33,7 +33,7 @@ export default {
     },
     methods: {
         modelOpen () {
-            this.$store.commit('changeSettingModelVisible')
+            this.$store.commit('switch', 'settingModelVisible')
         }
     },
 }

@@ -37,6 +37,6 @@ export default {
     .title {
         font-size: 6vw;
         font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-        font-weight: bold;
+        // font-weight: bold;
     }
 </style>

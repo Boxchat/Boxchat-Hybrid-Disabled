@@ -2,7 +2,8 @@
     <div id="app">
 
         <oa-header :title="title"></oa-header>
-        
+        <chat-model></chat-model>
+
         <div class="main-content">
             <div class="card" v-for="item in index" :key="item.index">
                 <div class="card-item">
@@ -21,6 +22,7 @@
 
 <script>
 import OaHeader from './Oa-header.vue'
+import ChatModel from './Chat-model.vue'
 export default {
     data() {
         return {
@@ -32,7 +34,8 @@ export default {
         }
     },
     components: {
-        OaHeader  
+        OaHeader,
+        ChatModel
     }
 }
 </script>
