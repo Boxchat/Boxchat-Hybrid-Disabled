@@ -2,7 +2,8 @@
     <div id="app">
         <mt-header fixed class="header">
             <div slot="left" class="title">
-                <mt-button icon="back" v-if="this.headertype == 'integral'" @click="modelClose"></mt-button>
+                <mt-button icon="back" v-if="this.headertype == 'integral' && this.where == 'setting'" @click="modelClose_Setting"></mt-button>
+                <mt-button icon="back" v-if="this.headertype == 'integral' && this.where == 'chat'" @click="modelClose_Chat"></mt-button>
                 {{title}}
             </div>
         </mt-header>
@@ -11,18 +12,23 @@
 
 <script>
 export default {
-    props:['title', 'headertype'],
+    props:['title', 'headertype', 'where'],
     data () {
         return{
             popupVisible: false,
         }
     },
     methods: {
-        modelClose () {
+        modelClose_Setting () {
             // console.log(this.popupVisible);
-            this.$emit('modelClose', this.popupVisible)
+            this.$store.commit('switch', 'settingModelVisible')
+
+        },
+        modelClose_Chat () {
+            this.$store.commit('switch', 'chatModelVisible')
         }
     },
+
 }
 </script>
 

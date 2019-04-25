@@ -5,7 +5,7 @@
         <chat-model></chat-model>
 
         <div class="main-content">
-            <div class="card" v-for="item in index" :key="item.index">
+            <div class="card" v-for="item in index" :key="item.index" @click="toChat">
                 <div class="card-item">
                     <div class="header">
                         <img src="../assets/img/header/header.jpg" alt="header">
@@ -36,7 +36,13 @@ export default {
     components: {
         OaHeader,
         ChatModel
-    }
+    },
+    methods: {
+        toChat () {
+            this.$store.commit('switch', 'chatModelVisible')
+            console.log(this.$store.getters.chatModelVisible)
+        }
+    },
 }
 </script>
 

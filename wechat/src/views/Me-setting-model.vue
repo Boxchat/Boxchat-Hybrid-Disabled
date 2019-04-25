@@ -1,6 +1,6 @@
 <template>
     <mt-popup v-model="modelStat" position="right" class="pop--white">
-        <oa-header :title="title" :headertype="headertype" @modelClose="modelClose"></oa-header>
+        <oa-header :where="where" :title="title" :headertype="headertype" @modelClose="modelClose"></oa-header>
         
     </mt-popup>
 </template>
@@ -25,6 +25,7 @@ export default {
             title: '设置',
             back: 'back',
             modelStat: false,
+            where: 'setting'
         }
     },
     methods: {
