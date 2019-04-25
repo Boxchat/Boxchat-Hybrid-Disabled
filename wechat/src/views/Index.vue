@@ -1,23 +1,18 @@
 <template>
     <div id="app">
 
-        <oa-header title="首页"></oa-header>
+        <oa-header :title="title"></oa-header>
         
         <div class="main-content">
-            <div class="card">
+            <div class="card" v-for="item in index" :key="item.index">
                 <div class="card-item">
                     <div class="header">
                         <img src="../assets/img/header/header.jpg" alt="header">
                     </div>
-                    <div class="username">{{username}}</div>
-                </div>
-            </div>
-            <div class="card">
-                <div class="card-item">
-                    <div class="header">
-                        <img src="../assets/img/header/header.jpg" alt="header">
+                    <div class="user">
+                        <div class="username">{{item.username}}</div>
+                        <div class="msg">{{item.msg}}</div>
                     </div>
-                    <div class="username">{{username}}</div>
                 </div>
             </div>
         </div>
@@ -29,7 +24,11 @@ import OaHeader from './Oa-header.vue'
 export default {
     data() {
         return {
-            username: '测试用户'
+            title: '微信',
+            index: [
+                {username: '测试用户1',msg: '这是一条测试消息。'}, 
+                {username: '测试用户2',msg: '这是一条测试消息。'}
+            ]
         }
     },
     components: {
@@ -40,10 +39,27 @@ export default {
 
 <style lang="scss" scoped>
 
+    .username {
+        font-size: 4.5vw
 
+    }
 
     .main-content {
         margin-top: 16vw;
+    }
+    
+    .user {
+        margin-left: 4vw;
+        height: 13vw;
+        width: 75vw;
+        border-bottom: 0.1vw solid #DADADA;
+    }
+
+    .msg {
+        color: #B5B5B5;
+        font-size: 3.8vw;
+        margin-top: 1vw;
+        // padding-bottom: 0;
     }
 
     .card {
@@ -51,9 +67,9 @@ export default {
             height: 20vw;
             // background-color: red;
             display: flex;
+            // border-bottom: 0.1vw solid #DADADA;
             align-items: center;
-            padding-left: 3vw;
-            border-bottom: 0.1vw solid #DADADA;
+            padding-left: 2.5vw;
             .header {
                 height: 13vw;
                 color: black;

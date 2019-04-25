@@ -1,24 +1,46 @@
 <template>
     <div id="app">
         <div class="main-content">
-            <router-link to="/login" tag="div">
-                <div class="card">
-                    <div class="card-item">
-                        <div class="icon">
-                            <img src="@/assets/img/icon/Setting.png" alt="Icon-Setting">
-                        </div>
-                        <div class="font">
-                            设置
-                        </div>
+            
+            <!-- <Me-setting-model :popupVisible="settingModelVisible" :headertype="headertype"></Me-setting-model> -->
+            <Me-setting-model :headertype="headertype"></Me-setting-model>
+            <div class="card">
+                <div class="card-item" @click="modelOpen">
+                    <div class="icon">
+                        <img src="@/assets/img/icon/Setting.png" alt="Icon-Setting">
+                    </div>
+                    <div class="font">
+                        设置
                     </div>
                 </div>
+            </div>
             
-            </router-link>
+
         </div>
     </div>
 </template>
 
+<script>
+import MeSettingModel from './Me-setting-model.vue'
+export default {
+    components: {
+        MeSettingModel
+    },
+    data () {
+        return {
+            headertype: 'integral',
+        }
+    },
+    methods: {
+        modelOpen () {
+            this.$store.commit('changeSettingModelVisible')
+        }
+    },
+}
+</script>
+
 <style lang="scss" scoped>
+
 
     .icon {
         height: 3.5vh;
@@ -38,10 +60,6 @@
         height: 8vh;
         background-color: #fff;
     }
-
-    // .main-content {
-    //     margin-top: 8vh;
-    // }
 
     .more {
         height: 4vh;

@@ -2,7 +2,7 @@
     <div id="app">
         <mt-header fixed class="header">
             <router-link to="/" slot="right">
-                <img icon="more" src="@/assets/img/icon/camera.png" class="more">
+                <img icon="more" src="@/assets/img/icon/camera.png" @click="dev_ing" class="more">
             </router-link>
         </mt-header>
         <div class="main-content">
@@ -126,6 +126,12 @@ export default {
             userlogo: require('../assets/img/header/header.jpg'),
             username: '埋桑',
             usernum: 123456789
+        }
+    },
+    methods: {
+        dev_ing () {
+            this.$messagebox('开发中', '再等一等，功能就快开发完了');
+            // console.log('dev')
         }
     },
 }

@@ -19,7 +19,7 @@
         <mt-tabbar v-model="selected" class="tabbar" fixed>
             <mt-tab-item class="tabbar-item" id="index">
                 <img slot="icon" src="../assets/img/tabbar/chat.svg">
-                首页
+                微信
             </mt-tab-item>
             <mt-tab-item class="tabbar-item" id="address">
                 <img slot="icon" src="../assets/img/tabbar/address.svg">
@@ -43,12 +43,6 @@ export default {
         return {
             selected: 'index',
         }
-    },
-    watch: {
-      selected: function (val, oldVal) {
-        console.log(val)
-        // click后打印出当前mt-tab-item的id
-      }
     },
     components: {
         HomeIndex,
