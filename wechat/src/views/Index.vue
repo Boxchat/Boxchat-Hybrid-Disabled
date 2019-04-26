@@ -48,41 +48,49 @@ export default {
 
 <style lang="scss" scoped>
 
-    .username {
-        font-size: 4.5vw
-
-    }
 
     .main-content {
         margin-top: 16vw;
     }
     
     .user {
-        margin-left: 4vw;
-        height: 13vw;
-        width: 75vw;
+        margin-left: 3vw;
+        // height: 17vw;
+        width: 73vw;
         border-bottom: 0.1vw solid #DADADA;
+        padding-left: 0.5vw;
+        padding-top: 1vw;
+        padding-bottom: 3vw
+    }
+
+    .username {
+        font-size: 4.5vw;
+        margin-top: 1vw;
+
     }
 
     .msg {
         color: #B5B5B5;
-        font-size: 3.8vw;
-        margin-top: 1vw;
-        // padding-bottom: 0;
+        font-size: 3.5vw;
+        margin-top: 2vw;
+        margin-bottom: 2.5vw
     }
 
     .card {
         .card-item {
-            height: 20vw;
+            // height: 17vw;
             // background-color: red;
             display: flex;
             // border-bottom: 0.1vw solid #DADADA;
             align-items: center;
             padding-left: 2.5vw;
+            // padding-button: 1vw;
+            margin-bottom: 1vw;
             .header {
-                height: 13vw;
+                height: 14.5vw;
                 color: black;
                 display: flex;
+                margin-top: -2.5vw;
                 img {
                     height: 100%;
                 }

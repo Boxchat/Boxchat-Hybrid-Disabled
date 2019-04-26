@@ -41,7 +41,7 @@ export default {
         border-bottom: 1px solid #DADADA;
     }
     .title {
-        font-size: 6vw;
+        font-size: 5vw;
         font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
         // font-weight: bold;
     }
