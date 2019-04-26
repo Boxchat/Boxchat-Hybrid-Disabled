@@ -22,7 +22,7 @@
 import MeSettingModel from './Me-setting-model.vue'
 export default {
     components: {
-        MeSettingModel
+        MeSettingModel,
     },
     data () {
         return {
