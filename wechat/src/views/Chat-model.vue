@@ -3,8 +3,8 @@
         <oa-header :where="where" :headertype="headertype" :title="chatuser"></oa-header>
         <mt-tabbar class="tabbar">
             <div class="tabbar-content">
-                <mt-field placeholder="请输入发送的消息..." type="text" class="text-input" @blur.native.capture="test"></mt-field>
-                <mt-button class="send-button" plain>发送</mt-button>
+                <input type="text" class="text-input" ref="sendContent">
+                <mt-button class="send-button" plain @click="send">发送</mt-button>
             </div>
         </mt-tabbar>
     </mt-popup>
@@ -32,7 +32,10 @@
     .text-input {
         // border: solid 1px gray;
         width: 70%;
-        height: 5vw;
+        height: 9vw;
+        border: 0;
+        outline: none;
+        padding-left: 2.5vw
     }
 
     .send-button {
@@ -58,7 +61,7 @@ export default {
             modelStat: this.$store.getters.chatModelVisible,
             headertype: 'integral',
             chatuser: '聊天对象1',
-            where: 'chat'
+            where: 'chat',
         }
     },
     components: {
@@ -75,12 +78,11 @@ export default {
         }
     },
     methods: {
-        // send (e) {
-        //     e.preventDefault();
-        // },
-        test () {
-            console.log(1)
-        }
+        send () {
+            // e.preventDefault();
+            // console.log(this.$refs.content123.value)
+            this.$refs.sendContent.focus();
+        },
     },
 }
 </script>
