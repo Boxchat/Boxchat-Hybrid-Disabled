@@ -1,7 +1,7 @@
 <template>
-    <mt-popup v-model="modelStat" position="right" class="pop--white">
+    <mt-popup v-model="modelStat" position="right" class="pop--gray app">
         <oa-header :where="where" :title="title" :headertype="headertype" @modelClose="modelClose"></oa-header>
-        
+        <me-setting-appear class="me-setting-appear"></me-setting-appear>
     </mt-popup>
 </template>
 
@@ -11,14 +11,29 @@
         width: 100vw;
         background-color: white;
     }
+    .me-setting-appear {
+        margin-top: 16vw
+    }
 </style>
 
+<style lang="scss" scoped>
+    .pop--gray {
+        height: 100vh;
+        width: 100vw;
+        background-color: #EDEDED;
+    }
+</style>
+
+
+
 <script>
-import OaHeader from './Oa-header.vue'
+import OaHeader from './Oa-header.vue';
+import MeSettingAppear from './Me-setting-appear.vue'
 export default {
     props:["popupVisible", 'headertype'], 
     components: {
-        OaHeader
+        OaHeader,
+        MeSettingAppear
     },
     data () {
         return {
