@@ -6,8 +6,8 @@
                 <mt-button icon="back" v-if="this.headertype == 'integral' && this.where == 'chat'" @click="modelClose_Chat"></mt-button>
                 {{title}}
             </div>
-            <div slot="right" class="icon-area">
-                <div class="icon-search">
+            <div slot="right" class="icon-area" v-if="this.right == 'true'">
+                <div class="icon-search" @click="test">
                     <img src="@/assets/img/icon/search.png" alt="icon-search" class="img-100">
                 </div>
                 <div class="icon-add">
@@ -20,7 +20,7 @@
 
 <script>
 export default {
-    props:['title', 'headertype', 'where'],
+    props:['title', 'headertype', 'where', 'right',],
     data () {
         return{
             popupVisible: false,
@@ -34,9 +34,11 @@ export default {
         },
         modelClose_Chat () {
             this.$store.commit('switch', 'chatModelVisible')
+        },
+        test () {
+            console.log(this.search)
         }
     },
-
 }
 </script>
 

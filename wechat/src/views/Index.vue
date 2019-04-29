@@ -1,7 +1,7 @@
 <template>
     <div id="app">
 
-        <oa-header :title="title"></oa-header>
+        <oa-header :title="title" right="true"></oa-header>
         <chat-model></chat-model>
 
         <div class="main-content">
@@ -30,7 +30,7 @@ export default {
             index: [
                 {username: '测试用户1',msg: '这是一条测试消息。'}, 
                 {username: '测试用户2',msg: '这是一条测试消息。'}
-            ]
+            ],
         }
     },
     components: {
