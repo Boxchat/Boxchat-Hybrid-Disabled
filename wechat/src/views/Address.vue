@@ -1,6 +1,6 @@
 <template>
     <div id="app">
-        <oa-header :title="title" :headertype="headertype" right="true"></oa-header>
+        <oa-header :title="title" :headertype="headertype" :right="right"></oa-header>
         <div class="main-content">
             <mt-index-list class="mt-index-list">
                 <mt-index-section index="A">
@@ -132,7 +132,7 @@ export default {
             title: '通讯录',
             headertype: 'integral',
             where: 'address',
-            search: true
+            right: ['search', 'add']
         }
     }
 }

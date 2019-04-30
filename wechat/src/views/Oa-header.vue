@@ -6,13 +6,14 @@
                 <mt-button icon="back" v-if="this.headertype == 'integral' && this.where == 'chat'" @click="modelClose_Chat"></mt-button>
                 {{title}}
             </div>
-            <div slot="right" class="icon-area" v-if="this.right == 'true'">
-                <div class="icon-search" @click="test">
+            <div slot="right" class="icon-area">
+                <div class="icon-search" @click="test" v-if="isHave_search == true">
                     <img src="@/assets/img/icon/search.png" alt="icon-search" class="img-100">
                 </div>
-                <div class="icon-add">
+                <div class="icon-add" @click="test" v-if="isHave_add == true">
                     <img src="@/assets/img/icon/add.svg" alt="icon-add" class="img-100">
                 </div>
+                <!-- <mt-button icon="more" slot="right" ></mt-button> -->
             </div>
         </mt-header>
     </div>
@@ -20,7 +21,7 @@
 
 <script>
 export default {
-    props:['title', 'headertype', 'where', 'right',],
+    props:['title', 'headertype', 'where', 'right'],
     data () {
         return{
             popupVisible: false,
@@ -36,7 +37,39 @@ export default {
             this.$store.commit('switch', 'chatModelVisible')
         },
         test () {
-            console.log(this.search)
+            console.log('Click')
+        },
+        // isHave (arr, str) {
+        //     if (arr == undefined || str == undefined) {
+        //         return false
+        //     }
+        //     else {
+        //         let result = arr.indexOf(str);
+        //         if (result == -1) {
+        //             return false
+        //         }
+        //         else {
+        //             return true
+        //         }
+        //     }
+        // }
+    },
+    computed: {
+        isHave_search () {
+            if (this.right == undefined || this.right.indexOf('search') == -1) {
+                return false
+            }
+            else {
+                return true
+            }
+        },
+        isHave_add () {
+            if (this.right == undefined || this.right.indexOf('add') == -1) {
+                return false
+            }
+            else {
+                return true
+            }
         }
     },
 }
