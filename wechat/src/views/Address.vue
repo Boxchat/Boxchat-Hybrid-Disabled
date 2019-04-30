@@ -131,7 +131,6 @@ export default {
         return {
             title: '通讯录',
             headertype: 'integral',
-            where: 'address',
             right: ['search', 'add']
         }
     }
