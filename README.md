@@ -4,14 +4,7 @@ A Web Version of WeChat Powered by Hybird APP.
 ## Main Directory
 > In the readme file, we use the following prefix to differentially identify files and folders.We hope that it will be easier for our users to read the readme file in this way.
 
-> - R - FLOLDE(R)
-> - E - FIL(E)
-
-- R |- &nbsp; /webpack &nbsp; -| -> Project Entrance
-    - E |- &nbsp; /webpack/package.json &nbsp; -| -> The package.json for Webpack / Vue-template
-    - R |- &nbsp; /webpack/template &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;-| -> Vue-template
-    - R |- &nbsp; /webpack/wechat &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;-| -> Front-end project entry
-        - | &nbsp; /webpack/wechat/... &nbsp; -| -> The file structure under this file directory is consistent with the file structure of the Webpack project.
+![File Structure Diagram](https://github.com/CNMathon/Web-Wechat/blob/master/File%20Structure%20Diagram.png)
 
 ## How to Run
 > We can read the ```/webpack/wechat/package.json``` file for more details.
