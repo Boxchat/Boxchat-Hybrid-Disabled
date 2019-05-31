@@ -1,0 +1,4 @@
+// 解决 Mint-UI 中的 header 字体过大导致只能显示部分内容的 bug
+.mint-header-title {
+    overflow: visible;
+}
