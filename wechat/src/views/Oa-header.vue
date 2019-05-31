@@ -1,11 +1,11 @@
 <template>
     <div id="app">
-        <mt-header fixed class="header">
-            <div slot="left" class="title">
+        <mt-header fixed :title="title" class="header">
+            <!-- <div slot="left" class="title">
                 <mt-button icon="back" v-if="this.headertype == 'integral' && this.where == 'setting'" @click="modelClose_Setting"></mt-button>
                 <mt-button icon="back" v-if="this.headertype == 'integral' && this.where == 'chat'" @click="modelClose_Chat"></mt-button>
                 {{title}}
-            </div>
+            </div> -->
             <div slot="right" class="icon-area">
                 <div class="icon-search" @click="test" v-if="isHave_search == true">
                     <img src="@/assets/img/icon/search.png" alt="icon-search" class="img-100">
@@ -85,12 +85,13 @@ export default {
 
 <style lang="scss" scoped>
     .header {
-        background-color: #EDEDED;
-        color: black;
+        background-color: #6F564B;
+        color: white;
         height: 16vw;
         padding-left: 5vw;
         padding-right:5vw;
         border-bottom: 1px solid #DADADA;
+        font-size: 18px;
     }
     .title {
         font-size: 5vw;

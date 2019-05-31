@@ -26,7 +26,7 @@ import ChatModel from './Chat-model.vue'
 export default {
     data() {
         return {
-            title: '微信',
+            title: '消息',
             index: [
                 {username: '测试用户1',msg: '这是一条测试消息。'}, 
                 {username: '测试用户2',msg: '这是一条测试消息。'}
@@ -58,10 +58,10 @@ export default {
         margin-left: 3vw;
         // height: 17vw;
         width: 73vw;
-        border-bottom: 0.1vw solid #DADADA;
+        // border-bottom: 0.1vw solid #DADADA;
         padding-left: 0.5vw;
         padding-top: 1vw;
-        padding-bottom: 3vw
+        padding-bottom: 3vw;
     }
 
     .username {
@@ -88,12 +88,13 @@ export default {
             // padding-button: 1vw;
             margin-bottom: 1vw;
             .header {
-                height: 14.5vw;
+                height: 14vw;
                 color: black;
                 display: flex;
                 margin-top: -2.5vw;
                 img {
                     height: 100%;
+                    border-radius: 50%;
                 }
             }
         }

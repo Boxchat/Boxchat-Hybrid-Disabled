@@ -19,7 +19,7 @@
         <mt-tabbar v-model="selected" class="tabbar" fixed>
             <mt-tab-item class="tabbar-item" id="index">
                 <img slot="icon" src="../assets/img/tabbar/chat.svg">
-                微信
+                消息
             </mt-tab-item>
             <mt-tab-item class="tabbar-item" id="address">
                 <img slot="icon" src="../assets/img/tabbar/address.svg">
