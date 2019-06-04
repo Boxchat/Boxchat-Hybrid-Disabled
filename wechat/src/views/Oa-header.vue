@@ -1,11 +1,10 @@
 <template>
     <div id="app">
         <mt-header fixed :title="title" class="header">
-            <!-- <div slot="left" class="title">
+            <div slot="left" class="title">
                 <mt-button icon="back" v-if="this.headertype == 'integral' && this.where == 'setting'" @click="modelClose_Setting"></mt-button>
                 <mt-button icon="back" v-if="this.headertype == 'integral' && this.where == 'chat'" @click="modelClose_Chat"></mt-button>
-                {{title}}
-            </div> -->
+            </div>
             <div slot="right" class="icon-area">
                 <div class="icon-search" @click="test" v-if="isHave_search == true">
                     <img src="@/assets/img/icon/search.png" alt="icon-search" class="img-100">
