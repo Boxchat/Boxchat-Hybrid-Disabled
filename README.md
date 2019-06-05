@@ -1,5 +1,8 @@
-# Web-Wechat
-A Web Version of WeChat Powered by Hybird APP.
+# Boxchat-Hybrid
+A Secure Private Chat Platform.
+
+# CAUTION
+This project is already a branch of the Boxchat, and we may not update the Boxchat of this architecture in the future. We should transfer the project to Boxchat Native. Because I think that using the native APP architecture is a responsible behavior for the user.
 
 ## Main Directory
 > In the readme file, we use the following prefix to differentially identify files and folders.We hope that it will be easier for our users to read the readme file in this way.
