@@ -1,4 +1,4 @@
-# Boxchat-Hybrid
+# Boxchat-Hybrid-Disabled
 A Secure Private Chat Platform.
 
 # CAUTION
